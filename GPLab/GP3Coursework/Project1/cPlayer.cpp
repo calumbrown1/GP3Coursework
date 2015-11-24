@@ -14,11 +14,11 @@ void cPlayer::update(float elapsedTime)
 {
 	if (m_InputMgr->isKeyDown(VK_RIGHT))
 	{
-		translationZ += 5.0f;
+		translationZ = 1.0f;
 	}
 	if (m_InputMgr->isKeyDown(VK_LEFT))
 	{
-		translationZ -= 5.0f;
+		translationZ = -1.0f;
 	}
 
 	if (m_InputMgr->isKeyDown(VK_SPACE))
@@ -95,9 +95,9 @@ void cPlayer::update(float elapsedTime)
 
 	// Find out what direction we should be thrusting, using rotation.
 	glm::vec3 mdlVelocityAdd;
-	mdlVelocityAdd.x = -(float)glm::sin(glm::radians(m_mdlRotation));  // Remember to adjust for radians
+	mdlVelocityAdd.x = 1.0f;//-(float)glm::sin(glm::radians(m_mdlRotation));  // Remember to adjust for radians
 	mdlVelocityAdd.y = 0.0f;
-	mdlVelocityAdd.z = 0.0f; //-(float)glm::cos(glm::radians(m_mdlRotation));
+	mdlVelocityAdd.z = 0.0f;//-(float)glm::cos(glm::radians(m_mdlRotation));
 
 	m_mdlRotation -= rotationAngle;
 

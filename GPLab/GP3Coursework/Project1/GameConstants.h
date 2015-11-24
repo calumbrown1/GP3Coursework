@@ -70,6 +70,7 @@ struct mdlDimensions{
 };
 
 const float PLAYFIELDX = 100.0f;
+const float PLAYFIELDY = 100.0f;
 const float PLAYFIELDZ = 100.0f;
 
 extern int drawMode;
