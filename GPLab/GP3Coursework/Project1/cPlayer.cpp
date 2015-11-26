@@ -95,9 +95,9 @@ void cPlayer::update(float elapsedTime)
 
 	// Find out what direction we should be thrusting, using rotation.
 	glm::vec3 mdlVelocityAdd;
-	mdlVelocityAdd.x = 1.0f;//-(float)glm::sin(glm::radians(m_mdlRotation));  // Remember to adjust for radians
+	mdlVelocityAdd.x = 1.0f; //-(float)glm::sin(glm::radians(m_mdlRotation));  // Remember to adjust for radians
 	mdlVelocityAdd.y = 0.0f;
-	mdlVelocityAdd.z = 0.0f;//-(float)glm::cos(glm::radians(m_mdlRotation));
+	mdlVelocityAdd.z = 0.0f; //-(float)glm::cos(glm::radians(m_mdlRotation));
 
 	m_mdlRotation -= rotationAngle;
 
@@ -105,7 +105,7 @@ void cPlayer::update(float elapsedTime)
 	m_mdlDirection += mdlVelocityAdd;
 
 	m_mdlPosition += m_mdlDirection * m_mdlSpeed *elapsedTime;
-	m_mdlDirection *= 0.95f;
+	m_mdlDirection *= 0.80f;
 
 	rotationAngle = 0;
 	translationZ = 0;

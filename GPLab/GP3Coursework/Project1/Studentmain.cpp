@@ -146,6 +146,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	cModelLoader theLaser;
 	theLaser.loadModel("Models/laser.obj", laserTexture);
 
+	/*
 	for (int loop = 0; loop < 5; loop++)
 	{
 		theEnemy.push_back(new cEnemy);
@@ -153,7 +154,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		theEnemy[loop]->setMdlDimensions(spaceShipMdl.getModelDimensions());
 		theEnemy[loop]->setScale(glm::vec3(5, 5, 5));
 	}
-
+	*/
 
 	cPlayer thePlayer;
 	thePlayer.initialise(glm::vec3(0, -20, 0), 0.0f, glm::vec3(2, 2, 2), glm::vec3(0, 0, 0), 5.0f, true);
@@ -200,6 +201,22 @@ int WINAPI WinMain(HINSTANCE hInstance,
 				(*enemyIterator)->update(elapsedTime);
 			}
 		}
+		/*
+		==============================================================
+		| Enemy Spawning
+		==============================================================
+		*/
+
+		if ((0.0f + (((float)rand()) / (float)RAND_MAX) * (100.0f - -0.0f)) > 80.0f)
+		{
+			theEnemy.push_back(new cEnemy);
+			theEnemy[loop]->randomise();
+			theEnemy[loop]->setMdlDimensions(spaceShipMdl.getModelDimensions());
+			theEnemy[loop]->setScale(glm::vec3(5, 5, 5));
+		}
+
+
+
 
 		tardisMdl.renderMdl(thePlayer.getPosition(), thePlayer.getRotation(), thePlayer.getScale());
 		thePlayer.update(elapsedTime);
