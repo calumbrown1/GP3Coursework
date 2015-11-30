@@ -153,7 +153,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	
 	
 	cPlayer thePlayer;
-	thePlayer.initialise(glm::vec3(0, -20, 0), 0.0f, glm::vec3(2, 2, 2), glm::vec3(0, 0, 0), 5.0f, true);
+	thePlayer.initialise(glm::vec3(0, -20, -20), 0.0f, glm::vec3(2, 2, 2), glm::vec3(0, 0, 0), 5.0f, true);
 	thePlayer.setMdlDimensions(tardisMdl.getModelDimensions());
 	thePlayer.attachInputMgr(theInputMgr);
 	thePlayer.attachSoundMgr(theSoundMgr);
@@ -206,7 +206,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		if (curSpawnTime > spawnTime)
 		{
 			//generate number of enemies to spawn
-			int numSpawns = 5;
+			int numSpawns = (((float)rand()) / (float)RAND_MAX) * (5.0F);
 			for (int i = 0; i < numSpawns; i++)
 			{
 				//Spawn

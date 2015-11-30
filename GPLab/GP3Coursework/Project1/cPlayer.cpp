@@ -58,8 +58,9 @@ void cPlayer::update(float elapsedTime)
 		{
 			if ((*enemyIterator)->SphereSphereCollision((*laserIterartor)->getPosition(), (*laserIterartor)->getMdlRadius()))
 			{
+				
 				// if a collision set the bullet and spaceship to false
-				(*enemyIterator)->setIsActive(false);
+ 				(*enemyIterator)->setIsActive(false);
 				(*laserIterartor)->setIsActive(false);
 				// play the explosion sound.
 				m_SoundMgr->getSnd("Explosion")->playAudio(AL_TRUE);
@@ -106,6 +107,7 @@ void cPlayer::update(float elapsedTime)
 
 	m_mdlPosition += m_mdlDirection * m_mdlSpeed *elapsedTime;
 	m_mdlDirection *= 0.80f;
+
 
 	rotationAngle = 0;
 	translationZ = 0;
