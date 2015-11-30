@@ -37,8 +37,9 @@ int WINAPI WinMain(HINSTANCE hInstance,
     const int windowWidth = 1024;
     const int windowHeight = 768;
     const int windowBPP = 16;
-
-
+	float spawnTime= 3.0f;
+	float curSpawnTime = 0.0f;
+	int enemyNumber = 0;
 
     //This is our window
 	static cWNDManager* pgmWNDMgr = cWNDManager::getInstance();
@@ -146,16 +147,11 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	cModelLoader theLaser;
 	theLaser.loadModel("Models/laser.obj", laserTexture);
 
-	/*
-	for (int loop = 0; loop < 5; loop++)
-	{
-		theEnemy.push_back(new cEnemy);
-		theEnemy[loop]->randomise();
-		theEnemy[loop]->setMdlDimensions(spaceShipMdl.getModelDimensions());
-		theEnemy[loop]->setScale(glm::vec3(5, 5, 5));
-	}
-	*/
+	cModelLoader star;
+	//star.loadModel("Models/Star/StarModel.obj", starTexture);
 
+	
+	
 	cPlayer thePlayer;
 	thePlayer.initialise(glm::vec3(0, -20, 0), 0.0f, glm::vec3(2, 2, 2), glm::vec3(0, 0, 0), 5.0f, true);
 	thePlayer.setMdlDimensions(tardisMdl.getModelDimensions());
@@ -207,17 +203,25 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		==============================================================
 		*/
 
-		if ((0.0f + (((float)rand()) / (float)RAND_MAX) * (100.0f - -0.0f)) > 80.0f)
+		if (curSpawnTime > spawnTime)
 		{
-			theEnemy.push_back(new cEnemy);
-			theEnemy[loop]->randomise();
-			theEnemy[loop]->setMdlDimensions(spaceShipMdl.getModelDimensions());
-			theEnemy[loop]->setScale(glm::vec3(5, 5, 5));
+			//generate number of enemies to spawn
+			int numSpawns = 5;
+			for (int i = 0; i < numSpawns; i++)
+			{
+				//Spawn
+				theEnemy.push_back(new cEnemy);
+				theEnemy[enemyNumber]->randomise();
+				theEnemy[enemyNumber]->setMdlDimensions(spaceShipMdl.getModelDimensions());
+				theEnemy[enemyNumber]->setScale(glm::vec3(5, 5, 5));
+				enemyNumber++;
+			}
+			curSpawnTime = 0.0f;
 		}
-
-
-
-
+		else
+		{
+			curSpawnTime += 0.01;
+		}
 		tardisMdl.renderMdl(thePlayer.getPosition(), thePlayer.getRotation(), thePlayer.getScale());
 		thePlayer.update(elapsedTime);
 		
