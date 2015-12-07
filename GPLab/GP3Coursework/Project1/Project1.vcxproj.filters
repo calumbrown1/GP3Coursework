@@ -93,6 +93,9 @@
     <ClCompile Include="windowOGL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cStar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cCamera.h">
@@ -171,6 +174,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="windowOGL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cStar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

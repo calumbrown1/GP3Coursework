@@ -12,7 +12,7 @@ cStarfield::cStarfield()
 	srand((unsigned)time(NULL));
 	setRotAngle(0.0f);
 	glGetFloatv(GL_ALIASED_POINT_SIZE_RANGE, m_AliasedPointSizes);
-	m_NumStars = 1000;
+	m_NumStars = 250;
 	m_TextureID = 0;
 	m_FieldVolume = glm::vec3(1.0f,1.0f,1.0f);
 	m_StarPos = glm::vec3(0.0f, 0.0f, 0.0f);
