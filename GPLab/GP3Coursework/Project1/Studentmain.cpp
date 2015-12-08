@@ -193,6 +193,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		{
 			if ((*enemyIterator)->isActive())
 			{
+				glm::vec3 enemyRenderPos = (*enemyIterator)->getPosition();
+				enemyRenderPos.x += 5;
 				spaceShipMdl.renderMdl((*enemyIterator)->getPosition(), (*enemyIterator)->getRotation(), (*enemyIterator)->getScale());
 				(*enemyIterator)->update(elapsedTime);
 			}
@@ -211,10 +213,10 @@ int WINAPI WinMain(HINSTANCE hInstance,
 			{
 				//Spawn
 				theEnemy.push_back(new cEnemy);
+				int enemyNumber = theEnemy.size() - 1;
 				theEnemy[enemyNumber]->randomise();
 				theEnemy[enemyNumber]->setMdlDimensions(spaceShipMdl.getModelDimensions());
 				theEnemy[enemyNumber]->setScale(glm::vec3(5, 5, 5));
-				enemyNumber++;
 			}
 			curSpawnTime = 0.0f;
 		}
@@ -234,7 +236,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 			}
 		}
 
-		outputMsg = to_string(theEnemy.size()); // convert float to string
+		outputMsg = to_string(theEnemy.size()-1); // convert float to string
 		
 		glPushMatrix();
 		theOGLWnd.setOrtho2D(windowWidth, windowHeight);

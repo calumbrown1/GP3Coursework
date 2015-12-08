@@ -14,6 +14,10 @@ void cLaser::update(float elapsedTime)
 		cModel::m_mdlPosition.z < -PLAYFIELDZ)
 		cModel::m_IsActive = false;
 
+	if (m_mdlPosition.y >= 20.0f)
+	{
+		cLaser::setIsActive(false);
+	}
 }
 
 cLaser::~cLaser()
