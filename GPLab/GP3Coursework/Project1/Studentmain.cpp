@@ -88,10 +88,10 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	cTexture laserTexture;
 	laserTexture.createTexture("Models/laser.tga");
 	cTexture starTexture;
-	starTexture.createTexture("Models/StarTex.png");
+	starTexture.createTexture("Images/star.png");
 
 	// the starfield
-	//cStarfield theStarField(starTexture.getTexture(), glm::vec3(50.0f, 50.0f, 50.0f));
+	cStarfield theStarField(starTexture.getTexture(), glm::vec3(50.0f, 50.0f, 50.0f));
 
 	// Create Materials for lights
 	cMaterial sunMaterial(lightColour4(0.0f, 0.0f, 0.0f, 1.0f), lightColour4(1.0f, 1.0f, 1.0f, 1.0f), lightColour4(1.0f, 1.0f, 1.0f, 1.0f), lightColour4(0, 0, 0, 1.0f), 5.0f);
@@ -138,10 +138,6 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	theInputMgr->clearBuffers(theInputMgr->KEYS_DOWN_BUFFER | theInputMgr->KEYS_PRESSED_BUFFER);
 
 	// Model
-
-	//cModelLoader star;
-	//star.loadModel("Models/StarModel.obj", starTexture);
-
 	cModelLoader tardisMdl;
 	tardisMdl.loadModel("Models/tardis1314.obj", tardisTexture); // Player
 
@@ -151,6 +147,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	cModelLoader theLaser;
 	theLaser.loadModel("Models/laser.obj", laserTexture);
 
+	cModelLoader star;
+	//star.loadModel("Models/Star/StarModel.obj", starTexture);
 
 	
 	
@@ -184,7 +182,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		glLoadIdentity();
 		glLoadMatrixf((GLfloat*)&theCamera.getTheViewMatrix());
 
-		//theStarField.render(0.0f);
+		theStarField.render(0.0f);
 		sunMaterial.useMaterial();
 		sunLight.lightOn();
 		lfLight.lightOn();
@@ -199,8 +197,6 @@ int WINAPI WinMain(HINSTANCE hInstance,
 				(*enemyIterator)->update(elapsedTime);
 			}
 		}
-
-
 		/*
 		==============================================================
 		| Enemy Spawning
@@ -209,17 +205,16 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 		if (curSpawnTime > spawnTime)
 		{
-			srand(time(NULL));
 			//generate number of enemies to spawn
 			int numSpawns = (((float)rand()) / (float)RAND_MAX) * (5.0F);
 			for (int i = 0; i < numSpawns; i++)
 			{
 				//Spawn
 				theEnemy.push_back(new cEnemy);
-				int enemyNo = theEnemy.size() - 1;
-				theEnemy[enemyNo]->randomise();
-				theEnemy[enemyNo]->setMdlDimensions(spaceShipMdl.getModelDimensions());
-				theEnemy[enemyNo]->setScale(glm::vec3(5, 5, 5));
+				theEnemy[enemyNumber]->randomise();
+				theEnemy[enemyNumber]->setMdlDimensions(spaceShipMdl.getModelDimensions());
+				theEnemy[enemyNumber]->setScale(glm::vec3(5, 5, 5));
+				enemyNumber++;
 			}
 			curSpawnTime = 0.0f;
 		}

@@ -30,7 +30,7 @@ void cModelLoader::loadModel(const char* mdlFilename, cTexture mdlTexture)
 	m_model = glmReadOBJ(mdlFilename);
 	//glmUnitize(m_model);
 	glmFacetNormals(m_model);
-	glmVertexNormals(m_model, 180.0f ,false);
+	glmVertexNormals(m_model, 180.0f,false);
 	m_TextureID = mdlTexture.getTexture();
 	m_model->textures[m_model->numtextures - 1].id = m_TextureID;
 	m_model->textures[m_model->numtextures - 1].width = mdlTexture.getTWidth();

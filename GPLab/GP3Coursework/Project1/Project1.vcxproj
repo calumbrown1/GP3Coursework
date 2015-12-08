@@ -83,7 +83,6 @@
     <ClCompile Include="cSound.cpp" />
     <ClCompile Include="cSoundMgr.cpp" />
     <ClCompile Include="cSphere.cpp" />
-    <ClCompile Include="cStar.cpp" />
     <ClCompile Include="cStarfield.cpp" />
     <ClCompile Include="cTexture.cpp" />
     <ClCompile Include="cTriangle.cpp" />
@@ -112,7 +111,6 @@
     <ClInclude Include="cSound.h" />
     <ClInclude Include="cSoundMgr.h" />
     <ClInclude Include="cSphere.h" />
-    <ClInclude Include="cStar.h" />
     <ClInclude Include="cStarfield.h" />
     <ClInclude Include="cTexture.h" />
     <ClInclude Include="cTriangle.h" />
