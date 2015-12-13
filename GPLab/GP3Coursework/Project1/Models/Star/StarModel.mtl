@@ -2,6 +2,7 @@
 # File Created: 24.11.2015 17:48:34
 
 newmtl wire_088088225
+map_Kd StarTex.png
 	Ns 32
 	d 1
 	Tr 0
@@ -10,3 +11,5 @@ newmtl wire_088088225
 	Ka 0.3451 0.3451 0.8824
 	Kd 0.3451 0.3451 0.8824
 	Ks 0.3500 0.3500 0.3500
+
+

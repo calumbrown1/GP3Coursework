@@ -8,3 +8,4 @@ tardisWarsGame.cpp
 
 vector<cEnemy*> theEnemy;
 vector<cLaser*> theTardisLasers;
+vector<cStar*> theStars;

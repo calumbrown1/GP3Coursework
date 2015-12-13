@@ -1,5 +1,6 @@
 #include "cPlayer.h"
 
+
 cPlayer::cPlayer() : cModel()
 {
 
@@ -40,6 +41,7 @@ void cPlayer::update(float elapsedTime)
 		theTardisLasers[numLasers]->setSpeed(5.0f);
 		theTardisLasers[numLasers]->setPosition(this->getPosition() + mdlLaserDirection);
 		theTardisLasers[numLasers]->setIsActive(true);
+		theTardisLasers[numLasers]->setMdlRadius(2.5f);
 		//theTardisLasers[numLasers]->setMdlDimensions(theLaser.getModelDimensions());
 		theTardisLasers[numLasers]->update(elapsedTime);
 		// play the firing sound
@@ -64,6 +66,7 @@ void cPlayer::update(float elapsedTime)
 				(*laserIterartor)->setIsActive(false);
 				// play the explosion sound.
 				m_SoundMgr->getSnd("Explosion")->playAudio(AL_TRUE);
+				score += 10;
 			}
 		}
 	}

@@ -14,7 +14,7 @@ public:
 	cPlayer();
 	void attachInputMgr(cInputMgr* inputMgr);
 	virtual void update(float elapsedTime);
-
+	int score = 0;
 	~cPlayer();
 };
 #endif

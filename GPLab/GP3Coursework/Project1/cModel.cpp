@@ -123,7 +123,7 @@ void cModel::initialise(glm::vec3 mdlPosition, GLfloat mdlRotation, glm::vec3 md
 	m_mdlRadius = m_Dimensions.s_mdldepth / 2;
 	glm::vec3 mdlPos = getPosition();
 	GLfloat mdlRot = getRotation();
-	glRotatef(mdlRot, 0.0f, 1.0f, 0.0f);
+	glRotatef(mdlRot, 0.0f, 0.0f, 0.0f);
 	glTranslatef(mdlPos.x,mdlPos.y,mdlPos.z);
 }
 
