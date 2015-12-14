@@ -65,10 +65,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cAlien.cpp" />
     <ClCompile Include="cCamera.cpp" />
     <ClCompile Include="cColours.cpp" />
     <ClCompile Include="cCube.cpp" />
     <ClCompile Include="cEnemy.cpp" />
+    <ClCompile Include="cExplosion.cpp" />
     <ClCompile Include="cFont.cpp" />
     <ClCompile Include="cFontMgr.cpp" />
     <ClCompile Include="cInputMgr.cpp" />
@@ -94,10 +96,12 @@
     <ClCompile Include="windowOGL.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cAlien.h" />
     <ClInclude Include="cCamera.h" />
     <ClInclude Include="cColours.h" />
     <ClInclude Include="cCube.h" />
     <ClInclude Include="cEnemy.h" />
+    <ClInclude Include="cExplosion.h" />
     <ClInclude Include="cFont.h" />
     <ClInclude Include="cFontMgr.h" />
     <ClInclude Include="cInputMgr.h" />

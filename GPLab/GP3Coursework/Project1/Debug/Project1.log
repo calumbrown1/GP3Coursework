@@ -1,21 +1,17 @@
-﻿Build started 13/12/2015 00:34:22.
+﻿Build started 13/12/2015 23:59:14.
      1>Project "C:\Users\Calum\Documents\GitHub\GP3Coursework\GPLab\GP3Coursework\Project1\Project1.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Project1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Studentmain.cpp
-         Studentmain.cpp
-     1>c:\users\calum\documents\github\gp3coursework\gplab\gp3coursework\project1\studentmain.cpp(115): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
-     1>c:\users\calum\documents\github\gp3coursework\gplab\gp3coursework\project1\studentmain.cpp(137): warning C4244: 'argument' : conversion from 'const int' to 'GLfloat', possible loss of data
-     1>c:\users\calum\documents\github\gp3coursework\gplab\gp3coursework\project1\studentmain.cpp(280): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\calum\documents\github\gp3coursework\gplab\gp3coursework\project1\studentmain.cpp(294): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\calum\documents\github\gp3coursework\gplab\gp3coursework\project1\studentmain.cpp(299): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\calum\documents\github\gp3coursework\gplab\gp3coursework\project1\studentmain.cpp(306): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\calum\documents\github\gp3coursework\gplab\gp3coursework\project1\studentmain.cpp(314): warning C4305: '+=' : truncation from 'double' to 'float'
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt cPlayer.cpp
+         cPlayer.cpp
+     1>c:\users\calum\documents\github\gp3coursework\gplab\gp3coursework\project1\cplayer.cpp(122): warning C4305: '+=' : truncation from 'double' to 'float'
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Calum\Documents\GitHub\GP3Coursework\GPLab\GP3Coursework\Debug\GPCoursework.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Calum\Documents\GitHub\GP3Coursework\GPLab\GP3Coursework\Debug\GPCoursework.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Calum\Documents\GitHub\GP3Coursework\GPLab\GP3Coursework\Debug\GPCoursework.lib" /MACHINE:X86 Debug\cCamera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Calum\Documents\GitHub\GP3Coursework\GPLab\GP3Coursework\Debug\GPCoursework.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Calum\Documents\GitHub\GP3Coursework\GPLab\GP3Coursework\Debug\GPCoursework.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Calum\Documents\GitHub\GP3Coursework\GPLab\GP3Coursework\Debug\GPCoursework.lib" /MACHINE:X86 Debug\cAlien.obj
+         Debug\cCamera.obj
          Debug\cColours.obj
          Debug\cCube.obj
          Debug\cEnemy.obj
+         Debug\cExplosion.obj
          Debug\cFont.obj
          Debug\cFontMgr.obj
          Debug\cInputMgr.obj
@@ -52,4 +48,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.31
+Time Elapsed 00:00:01.98

@@ -16,7 +16,7 @@ void cEnemy::randomise()
 	cModel::m_mdlDirection.x = 0;
 	cModel::m_mdlDirection.y = -1;
 	cModel::m_mdlDirection.z = 0;
-	cModel::m_mdlSpeed = 2.0f;
+	cModel::m_mdlSpeed = 6.0f;
 	cModel::m_IsActive = true;
 }
 

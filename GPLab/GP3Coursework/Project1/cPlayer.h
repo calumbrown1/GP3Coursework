@@ -15,6 +15,7 @@ public:
 	void attachInputMgr(cInputMgr* inputMgr);
 	virtual void update(float elapsedTime);
 	int score = 0;
+	float charge = 100.0f;
 	~cPlayer();
 };
 #endif

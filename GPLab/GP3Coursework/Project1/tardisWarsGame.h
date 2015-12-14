@@ -5,8 +5,11 @@
 #include "cEnemy.h"
 #include "cLaser.h"
 #include "cStar.h"
+#include "cExplosion.h"
 
 extern vector<cEnemy*> theEnemy;
 extern vector<cLaser*> theTardisLasers;
 extern vector<cStar*> theStars;
+extern vector<cExploison*> theExplosions;
+extern bool music;
 #endif

@@ -22,7 +22,7 @@ void cPlayer::update(float elapsedTime)
 		translationZ = -1.0f;
 	}
 
-	if (m_InputMgr->isKeyDown(VK_SPACE))
+	if (m_InputMgr->isKeyDown(VK_SPACE) && charge >= 10)
 	{
 		glm::vec3 mdlLaserDirection;
 
@@ -34,10 +34,10 @@ void cPlayer::update(float elapsedTime)
 		// Add new bullet sprite to the vector array
 		theTardisLasers.push_back(new cLaser);
 		int numLasers = theTardisLasers.size() - 1;
-		theTardisLasers[numLasers]->initialise(glm::vec3(0, 0, 0), 0.0f, glm::vec3(1, 1, 1), glm::vec3(0, 0, 0), 5.0f, true);
+		theTardisLasers[numLasers]->initialise(glm::vec3(0, 0, 0), 0.0f, glm::vec3(0.1f, 0.1f, 0.1f), glm::vec3(0, 0, 0), 5.0f, true);
 		theTardisLasers[numLasers]->setDirection(mdlLaserDirection);
 		theTardisLasers[numLasers]->setRotation(0.0f);
-		theTardisLasers[numLasers]->setScale(glm::vec3(1, 1, 1));
+		theTardisLasers[numLasers]->setScale(glm::vec3(0.015, 0.015, 0.015));
 		theTardisLasers[numLasers]->setSpeed(5.0f);
 		theTardisLasers[numLasers]->setPosition(this->getPosition() + mdlLaserDirection);
 		theTardisLasers[numLasers]->setIsActive(true);
@@ -45,7 +45,8 @@ void cPlayer::update(float elapsedTime)
 		//theTardisLasers[numLasers]->setMdlDimensions(theLaser.getModelDimensions());
 		theTardisLasers[numLasers]->update(elapsedTime);
 		// play the firing sound
-		m_SoundMgr->getSnd("Shot")->playAudio(AL_TRUE);
+		if (music == true)m_SoundMgr->getSnd("Shot")->playAudio(AL_TRUE);
+		charge -= 10;
 	}
 
 	/*
@@ -60,12 +61,16 @@ void cPlayer::update(float elapsedTime)
 		{
 			if ((*enemyIterator)->SphereSphereCollision((*laserIterartor)->getPosition(), (*laserIterartor)->getMdlRadius()))
 			{
-				
 				// if a collision set the bullet and spaceship to false
  				(*enemyIterator)->setIsActive(false);
 				(*laserIterartor)->setIsActive(false);
+				//Create explosion at position
+				theExplosions.push_back(new cExploison);
+				int numExp = theExplosions.size() - 1; 
+				theExplosions[numExp]->initialise((*enemyIterator)->getPosition(), 0.0f, glm::vec3(0.1, 0.1, 0.1), glm::vec3(0, -1, 0), 6.0f,true);
+				theExplosions[numExp]->setScale(glm::vec3(0.1, 0.1, 0.1));
 				// play the explosion sound.
-				m_SoundMgr->getSnd("Explosion")->playAudio(AL_TRUE);
+				if (music==true)m_SoundMgr->getSnd("Explosion")->playAudio(AL_TRUE);
 				score += 10;
 			}
 		}
@@ -114,6 +119,7 @@ void cPlayer::update(float elapsedTime)
 
 	rotationAngle = 0;
 	translationZ = 0;
+	if (charge <100) charge += 0.1;
 }
 
 cPlayer::~cPlayer()
