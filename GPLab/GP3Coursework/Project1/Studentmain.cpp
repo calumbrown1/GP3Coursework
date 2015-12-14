@@ -334,7 +334,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 						//Spawn
 						theEnemy.push_back(new cEnemy);
 						int enemyNumber = theEnemy.size() - 1;
-						theEnemy[enemyNumber]->randomise();
+						theEnemy[enemyNumber]->initialise();
 						theEnemy[enemyNumber]->setMdlDimensions(spaceShipMdl.getModelDimensions());
 						theEnemy[enemyNumber]->setScale(glm::vec3(5, 5, 5));
 					}
@@ -405,9 +405,22 @@ int WINAPI WinMain(HINSTANCE hInstance,
 				GameOver(1);
 			}
 			//Win
-			if (tCount >= 90)
+			if (tCount >= 60)
 			{
 				GameOver(2);
+			}
+					/*
+		==============================================================
+		| CAMERA SWITCHING
+		==============================================================
+		*/
+			if (camType == true && theInputMgr->isKeyDown(0x43))
+			{
+				camType = false;
+			}
+			else if (camType == false && theInputMgr->isKeyDown(0x43))
+			{
+				camType = true;
 			}
 		}
 
@@ -423,22 +436,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 			thePlayer.score = 0;
 			tCount = 0;
 		}
-		/*
-		==============================================================
-		| CAMERA SWITCHING
-		==============================================================
-		*/
-		if (gameState == 0 && theInputMgr->isKeyDown(0x43))
-		{
-			if (camType == true)
-			{
-				camType = false;
-			}
-			else
-			{
-				camType = true;
-			}
-		}
+
 		/*
 		==============================================================
 		| SOUND TOGGLE

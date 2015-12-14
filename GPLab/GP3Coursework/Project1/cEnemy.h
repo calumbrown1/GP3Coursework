@@ -9,7 +9,7 @@ class cEnemy : public cModel
 public:
 	cEnemy();
 
-	void randomise();
+	void initialise();
 	virtual void update(float elapsedTime);
 
 	~cEnemy();

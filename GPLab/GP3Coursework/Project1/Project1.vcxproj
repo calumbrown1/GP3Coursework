@@ -137,6 +137,7 @@
     <Library Include="Libraries\OpenAL32.lib" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="Libraries\alut.dll" />
     <None Include="Libraries\DevIL.dll" />
     <None Include="Libraries\freeglut.dll" />

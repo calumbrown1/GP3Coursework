@@ -212,5 +212,6 @@
     <None Include="Libraries\ILUT.dll" />
     <None Include="Libraries\OpenAL32.dll" />
     <None Include="Libraries\zlib1.dll" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

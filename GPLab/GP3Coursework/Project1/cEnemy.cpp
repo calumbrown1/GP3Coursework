@@ -5,7 +5,7 @@ cEnemy::cEnemy() : cModel()
 	
 }
 
-void cEnemy::randomise()
+void cEnemy::initialise()
 {
 
 

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="cModel" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAYIhAALAIAEGgEAEgABgCGAAwAIATAAABCAEGBQA=</HashCode>
+      <FileName>cModel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cModelLoader" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAAAAAAAIAAgAAgAgIAAACAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>cModelLoader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cLaser" Collapsed="true">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>cLaser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cExploison" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAUAAA=</HashCode>
+      <FileName>cExplosion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cEnemy" Collapsed="true">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAEAQAAAAFAEAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>cEnemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cStar" Collapsed="true">
+    <Position X="1.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAgAAAAACABAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>cStar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cTexture" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAMAAAhAAAAAEAAAEAMECAAAAAAAAAIgAAAA=</HashCode>
+      <FileName>cTexture.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cCamera" Collapsed="true">
+    <Position X="1" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEECAgTAAgIBICCAAAAARAQMACEkAAAAAAUQEIoMEAA=</HashCode>
+      <FileName>cCamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cSound" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="cSound::FMTCHUNK" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>cSound.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>SCEAAABIABAQAYIAAAAAAACECAAKAAAAAAAAgQgCAAA=</HashCode>
+      <FileName>cSound.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cPlayer" Collapsed="true">
+    <Position X="9.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABACAAAAgAAAgAAAIAAAAAAAAAAAAAAAAAAEEAAA=</HashCode>
+      <FileName>cPlayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cSoundMgr" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAEAAAAAAAEAIgAAAAAAAAYAAAICAgACAAA=</HashCode>
+      <FileName>cSoundMgr.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cLight" Collapsed="true">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAyAACAABAAAIEAAAAAAAAAAAACCAQAABIAAAAQ=</HashCode>
+      <FileName>cLight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cFont" Collapsed="true">
+    <Position X="1" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAgAIAAAAAAAAAAAAAAIAAAAEAAAAAA=</HashCode>
+      <FileName>cFont.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cFontMgr" Collapsed="true">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAACAAAAAAAEAAAQIEAACAAAAABA=</HashCode>
+      <FileName>cFontMgr.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cInputMgr" Collapsed="true">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECACAAAAAAwACAAAAIgIBEQAAAAAAAxEREADEEUAEAE=</HashCode>
+      <FileName>cInputMgr.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="windowOGL" Collapsed="true">
+    <Position X="7" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABAAAAABAAAABAAAAAAAAAAAAAAAAACAAAAABAAA=</HashCode>
+      <FileName>windowOGL.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cWNDManager" Collapsed="true">
+    <Position X="9" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CYAgISAAAAgAAQChAAAAEBQAAgABAAQAAAImRAEAAAA=</HashCode>
+      <FileName>cWNDManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
